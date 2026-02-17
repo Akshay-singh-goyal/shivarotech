@@ -4,7 +4,6 @@ import {
   ShieldCheck,
   Globe,
   Rocket,
-  Phone,
 } from "lucide-react";
 
 import "./home.css";
