@@ -25,6 +25,7 @@ export default function Navbar() {
     { name: "Services", path: "/services" },
     { name: "Pricing", path: "/pricing" },
     { name: "Contact", path: "/contact" }, // optional anchor
+    { name: "Estate", path: "/real-state" },
   ];
 
   return (

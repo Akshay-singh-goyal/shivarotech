@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { HelmetProvider } from "react-helmet-async";
 
 import Home from "./components/Home";
 import Services from "./components/Services";
@@ -7,6 +8,7 @@ import Loader from "./Pages/Loader";
 import Pricing from "./Pages/Priceing";
 import ContactFloat from "./Pages/ContactFloat";
 import ContactPage from "./Pages/ContactPage";
+import RealEstate from "./Pages/RealEstate";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -16,7 +18,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // 3 sec loader
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -27,24 +29,26 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
-      {/* ===== Routes ===== */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-         <Route path="/contact" element={<ContactPage />} />
-        <Route
-          path="/pricing"
-          element={<Pricing onSelectPlan={setSelectedPlan} />}
-        />
-      </Routes>
+    <HelmetProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/real-state" element={<RealEstate />} />
+          <Route
+            path="/pricing"
+            element={<Pricing onSelectPlan={setSelectedPlan} />}
+          />
+        </Routes>
 
-      {/* ===== Global Contact Float (Outside Routes) ===== */}
-      <ContactFloat
-        selectedPlan={selectedPlan}
-        clearPlan={() => setSelectedPlan(null)}
-      />
-    </BrowserRouter>
+        {/* Global Floating Contact */}
+        <ContactFloat
+          selectedPlan={selectedPlan}
+          clearPlan={() => setSelectedPlan(null)}
+        />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 
