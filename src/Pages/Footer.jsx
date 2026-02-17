@@ -16,7 +16,7 @@ export default function Footer() {
         {/* ===== Company Info ===== */}
         <div className="footer-section company">
           <Link to="/" className="footer-logo">
-            <img src={img1} alt="Company Logo" />
+            <img src={img1} alt="Shivora Tech Logo" />
           </Link>
 
           <p className="footer-description">
@@ -24,11 +24,43 @@ export default function Footer() {
             online with modern design and powerful backend systems.
           </p>
 
+          {/* ===== Social Media Links ===== */}
           <div className="social-icons">
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaLinkedinIn /></a>
-            <a href="#"><FaWhatsapp /></a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <FaFacebookF />
+            </a>
+
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <FaInstagram />
+            </a>
+
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn />
+            </a>
+
+            <a
+              href="https://wa.me/917879680488"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <FaWhatsapp />
+            </a>
           </div>
         </div>
 
@@ -53,8 +85,18 @@ export default function Footer() {
         {/* ===== Contact Info ===== */}
         <div className="footer-section">
           <h3>Contact Us</h3>
-          <p>Email: Theitwallah@email.com</p>
-          <p>Phone: +91 7879680488</p>
+          <p>
+            Email:{" "}
+            <a href="mailto:theitwallah@email.com">
+              theitwallah@email.com
+            </a>
+          </p>
+          <p>
+            Phone:{" "}
+            <a href="tel:+917879680488">
+              +91 7879680488
+            </a>
+          </p>
           <p>Location: India</p>
         </div>
       </div>
