@@ -1,0 +1,120 @@
+/* ===== FLOATING WRAPPER ===== */
+.floating-wrapper {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  z-index: 9999;
+}
+
+/* ===== MAIN BUTTON ===== */
+.main-button {
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 242, 254, 0.4);
+  transition: 0.3s ease;
+}
+
+.main-button:hover {
+  transform: scale(1.1);
+}
+
+/* ===== ICON GROUP ===== */
+.icon-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ===== SMALL ICONS ===== */
+.small-icon {
+  width: 42px;
+  height: 42px;
+  font-size: 16px;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: white !important;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.small-icon:hover {
+  transform: scale(1.15);
+}
+
+/* Brand Colors */
+.whatsapp {
+  background: #25D366;
+}
+
+.phone {
+  background: #007bff;
+}
+
+.email {
+  background: #ff4b5c;
+}
+
+/* ===== CONTACT PANEL ===== */
+.contact-panel {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  width: 330px;
+  padding: 25px;
+  border-radius: 18px;
+  background: #111827;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  color: white;
+  z-index: 9998;
+}
+
+/* Header */
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Form */
+.contact-panel input,
+.contact-panel textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #2d3748;
+  background: #1f2937;
+  color: white;
+  outline: none;
+}
+
+.contact-panel button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-panel button:hover {
+  opacity: 0.85;
+}
