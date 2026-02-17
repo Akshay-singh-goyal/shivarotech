@@ -1,0 +1,142 @@
+/* ================= MAIN SECTION ================= */
+
+.ourwork-section {
+  padding: 110px 6%;
+  background: #0f0f1a;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* ================= COUNTER ================= */
+
+.counter-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 120px;
+  gap: 40px;
+}
+
+.counter-box {
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+}
+
+.counter-box h2 {
+  font-size: 52px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00f5ff, #7f00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.counter-box p {
+  margin-top: 12px;
+  color: #bfbfbf;
+}
+
+/* ================= SECTION ================= */
+
+.section {
+  margin-bottom: 120px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 70px;
+}
+
+/* ================= AUTO SCROLL ================= */
+
+.auto-scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.auto-scroll-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scrollLeft 25s linear infinite;
+}
+
+.auto-scroll-wrapper:hover .auto-scroll-track {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================= PREMIUM CARD ================= */
+
+.premium-card {
+  min-width: 280px;
+  padding: 40px 30px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.4s ease;
+  cursor: pointer;
+
+  /* FIX FOR ANCHOR TAG */
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.premium-card svg {
+  margin-bottom: 5px;
+}
+
+.premium-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+  background: linear-gradient(135deg, #7f00ff, #00f5ff);
+  color: #ffffff;
+}
+
+.premium-card h3 {
+  margin-top: 18px;
+  font-size: 20px;
+}
+
+.premium-card p {
+  margin-top: 10px;
+  color: #c4c4c4;
+  line-height: 1.6;
+}
+
+.premium-card:hover p {
+  color: #ffffff;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .counter-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .premium-card {
+    min-width: 240px;
+  }
+}

@@ -12,6 +12,7 @@ import Services from "../components/Services";
 import ContactFloat from "../Pages/ContactFloat";
 import Priceing from "../Pages/Priceing";
 import Footer from "../Pages/Footer";
+import Ourwork from "../Pages/Ourwork";
 
 
 
@@ -97,7 +98,8 @@ export default function Home() {
 
         </div>
       </section>
-
+      {/* Our work */}
+      <Ourwork/>
       {/* FOOTER */}
       <Footer/>
 
